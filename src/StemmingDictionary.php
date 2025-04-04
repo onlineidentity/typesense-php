@@ -5,7 +5,7 @@ namespace Typesense;
 class StemmingDictionary
 {
     private $id;
-    private ApiCall $apiCall;
+    private $apiCall;
 
     public function __construct(string $id, ApiCall $apiCall)
     {

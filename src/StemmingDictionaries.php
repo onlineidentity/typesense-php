@@ -6,7 +6,7 @@ class StemmingDictionaries implements \ArrayAccess
 {
     const RESOURCE_PATH = '/stemming/dictionaries';
 
-    private ApiCall $apiCall;
+    private $apiCall;
     private $typesenseDictionaries = [];
 
     public function __construct(ApiCall $apiCall)
@@ -27,7 +27,9 @@ class StemmingDictionaries implements \ArrayAccess
         $dictionaryInJSONLFormat = is_array($wordRootCombinations) ? implode(
             "\n",
             array_map(
-                static fn(array $wordRootCombo) => json_encode($wordRootCombo, JSON_THROW_ON_ERROR),
+                static function (array $wordRootCombo) {
+                    return json_encode($wordRootCombo);
+                },
                 $wordRootCombinations
             )
         ) : $wordRootCombinations;
@@ -36,7 +38,7 @@ class StemmingDictionaries implements \ArrayAccess
 
         return is_array($wordRootCombinations) ? array_map(
             static function ($item) {
-                return json_decode($item, true, 512, JSON_THROW_ON_ERROR);
+                return json_decode($item, true, 512);
             },
             array_filter(
                 explode("\n", $resultsInJSONLFormat),

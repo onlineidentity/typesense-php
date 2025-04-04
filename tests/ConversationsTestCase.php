@@ -8,7 +8,7 @@ use Typesense\Conversations;
 abstract class ConversationsTestCase extends TestCase
 {
 
-    private Conversations $mockConversations;
+    private $mockConversations;
 
     protected function setUp(): void
     {

@@ -19,17 +19,17 @@ class Overrides implements \ArrayAccess
     /**
      * @var ApiCall
      */
-    private ApiCall $apiCall;
+    private $apiCall;
 
     /**
      * @var string
      */
-    private string $collectionName;
+    private $collectionName;
 
     /**
      * @var array
      */
-    private array $overrides = [];
+    private $overrides = [];
 
     /**
      * Overrides constructor.

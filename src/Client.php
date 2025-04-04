@@ -18,77 +18,77 @@ class Client
     /**
      * @var Configuration
      */
-    private Configuration $config;
+    private $config;
 
     /**
      * @var Collections
      */
-    public Collections $collections;
+    public $collections;
 
     /**
      * @var Stopwords
      */
-    public Stopwords $stopwords;
+    public $stopwords;
 
     /**
      * @var Aliases
      */
-    public Aliases $aliases;
+    public $aliases;
 
     /**
      * @var Keys
      */
-    public Keys $keys;
+    public $keys;
 
     /**
      * @var Debug
      */
-    public Debug $debug;
+    public $debug;
 
     /**
      * @var Metrics
      */
-    public Metrics $metrics;
+    public $metrics;
 
     /**
      * @var Health
      */
-    public Health $health;
+    public $health;
 
     /**
      * @var Operations
      */
-    public Operations $operations;
+    public $operations;
 
     /**
      * @var MultiSearch
      */
-    public MultiSearch $multiSearch;
+    public $multiSearch;
 
     /**
      * @var Presets
      */
-    public Presets $presets;
+    public $presets;
 
     /**
      * @var Analytics
      */
-    public Analytics $analytics;
+    public $analytics;
 
     /**
      * @var Stemming
      */
-    public Stemming $stemming;
+    public $stemming;
 
     /**
      * @var Conversations
      */
-    public Conversations $conversations;
+    public $conversations;
 
     /**
      * @var ApiCall
      */
-    private ApiCall $apiCall;
+    private $apiCall;
 
     /**
      * Client constructor.

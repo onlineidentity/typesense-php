@@ -7,7 +7,7 @@ use Typesense\Documents;
 
 class DocumentsTest extends TestCase
 {
-    private ?Documents $testDocuments = null;
+    private $testDocuments = null;
     private $document =   [
         "id" => "4",
         "title" => "Book 4",
@@ -45,7 +45,7 @@ class DocumentsTest extends TestCase
 
     public function testCanUpsertADocument(): void
     {
-        $documentWithDifferentId = [...$this->document, 'id' => '1']; // id 1 already exists in the collection
+        $documentWithDifferentId = array_merge($this->document, ['id' => '1']); // id 1 already exists in the collection
 
         $response = $this->testDocuments->upsert($documentWithDifferentId);
         $this->assertEquals($documentWithDifferentId, $response);
@@ -53,9 +53,11 @@ class DocumentsTest extends TestCase
 
     public function testCanImportJsonlDocumentsWithQueryParameter(): void
     {
-        $documentWithDifferentId = [...$this->document, 'id' => '1'];
+        $documentWithDifferentId = array_merge($this->document, ['id' => '1']);
         $jsonlDocuments = join(PHP_EOL, array_map(
-            fn ($item) => json_encode($item),
+            function ($item) {
+                return json_encode($item);
+            },
             [$this->document, $documentWithDifferentId]
         ));
 
@@ -67,7 +69,7 @@ class DocumentsTest extends TestCase
 
     public function testCanImportArrayOfDocuments(): void
     {
-        $documentWithDifferentId = [...$this->document, 'id' => '5'];
+        $documentWithDifferentId = array_merge($this->document, ['id' => '5']);
 
         $response = $this->testDocuments->import([$this->document, $documentWithDifferentId]);
         $this->assertEquals(1, $response[0]['success']);

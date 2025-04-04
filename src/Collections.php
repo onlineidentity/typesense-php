@@ -19,12 +19,12 @@ class Collections implements \ArrayAccess
     /**
      * @var ApiCall
      */
-    private ApiCall $apiCall;
+    private $apiCall;
 
     /**
      * @var array
      */
-    private array $typesenseCollections = [];
+    private $typesenseCollections = [];
 
     /**
      * Collections constructor.

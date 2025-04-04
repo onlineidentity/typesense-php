@@ -19,12 +19,12 @@ class Aliases implements \ArrayAccess
     /**
      * @var ApiCall
      */
-    private ApiCall $apiCall;
+    private $apiCall;
 
     /**
      * @var array
      */
-    private array $typesenseAliases = [];
+    private $typesenseAliases = [];
 
     /**
      * Aliases constructor.

@@ -13,7 +13,7 @@ use \stdClass;
 
 class HttpClientsTest extends TestCase
 {
-    private array $baseConfig;
+    private $baseConfig;
 
     protected function setUp(): void
     {

@@ -17,12 +17,12 @@ class ConversationModels implements \ArrayAccess
     /**
      * @var ApiCall
      */
-    private ApiCall $apiCall;
+    private $apiCall;
 
     /**
      * @var array
      */
-    private array $typesenseModels = [];
+    private $typesenseModels = [];
 
     /**
      * ConversationModels constructor.

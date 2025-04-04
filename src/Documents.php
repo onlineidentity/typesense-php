@@ -19,17 +19,17 @@ class Documents implements \ArrayAccess
     /**
      * @var string
      */
-    private string $collectionName;
+    private $collectionName;
 
     /**
      * @var ApiCall
      */
-    private ApiCall $apiCall;
+    private $apiCall;
 
     /**
      * @var array
      */
-    private array $documents = [];
+    private $documents = [];
 
     /**
      * Documents constructor.
@@ -144,7 +144,9 @@ class Documents implements \ArrayAccess
             $documentsInJSONLFormat = implode(
                 "\n",
                 array_map(
-                    static fn(array $document) => json_encode($document, JSON_THROW_ON_ERROR),
+                    static function (array $document) {
+                        return json_encode($document);
+                    },
                     $documents
                 )
             );
@@ -160,7 +162,7 @@ class Documents implements \ArrayAccess
 
         if (is_array($documents)) {
             return array_map(static function ($item) {
-                return json_decode($item, true, 512, JSON_THROW_ON_ERROR);
+                return json_decode($item, true, 512);
             }, explode("\n", $resultsInJSONLFormat));
         } else {
             return $resultsInJSONLFormat;

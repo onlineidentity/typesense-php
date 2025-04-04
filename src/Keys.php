@@ -19,12 +19,12 @@ class Keys implements \ArrayAccess
     /**
      * @var ApiCall
      */
-    private ApiCall $apiCall;
+    private $apiCall;
 
     /**
      * @var array
      */
-    private array $keys = [];
+    private $keys = [];
 
     /**
      * Keys constructor.
@@ -58,7 +58,7 @@ class Keys implements \ArrayAccess
         string $searchKey,
         array $parameters
     ): string {
-        $paramStr     = json_encode($parameters, JSON_THROW_ON_ERROR);
+        $paramStr     = json_encode($parameters);
         $digest       = base64_encode(
             hash_hmac(
                 'sha256',

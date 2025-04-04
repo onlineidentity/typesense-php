@@ -17,32 +17,32 @@ class Collection
     /**
      * @var string
      */
-    private string $name;
+    private $name;
 
     /**
      * @var ApiCall
      */
-    private ApiCall $apiCall;
+    private $apiCall;
 
     /**
      * @var Documents
      */
-    public Documents $documents;
+    public $documents;
 
     /**
      * @var Overrides
      */
-    public Overrides $overrides;
+    public $overrides;
 
     /**
      * @var Synonyms
      */
-    public Synonyms $synonyms;
+    public $synonyms;
 
     /**
      * @var bool|null
      */
-    private ?bool $exists = null;
+    private $exists = null;
 
     /**
      * Collection constructor.

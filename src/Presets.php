@@ -26,7 +26,7 @@ class Presets implements \ArrayAccess
     /**
      * @var array
      */
-    private array $typesensePresets = [];
+    private $typesensePresets = [];
 
     /**
      * Presets constructor.

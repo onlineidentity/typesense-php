@@ -42,7 +42,7 @@ class AliasesTest extends TestCase
             'collection_name' => 'companies_june11'
         ];
         $res = $this->client()->aliases->upsert("abc123?=+/~-_- &| test'", $aliasedCollection);
-        $this->assertEquals(["name"=>"abc123?=+/~-_- &| test'", ...$aliasedCollection], $res);
+        $this->assertEquals(array_merge(["name"=>"abc123?=+/~-_- &| test'",], $aliasedCollection), $res);
     }
 
     public function testCanRetrieveAlias(): void

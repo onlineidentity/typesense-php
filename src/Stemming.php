@@ -6,9 +6,9 @@ class Stemming
 {
     const RESOURCE_PATH = '/stemming';
 
-    private ApiCall $apiCall;
+    private $apiCall;
 
-    private StemmingDictionaries $typesenseDictionaries;
+    private $typesenseDictionaries;
 
 
     public function __construct(ApiCall $apiCall)

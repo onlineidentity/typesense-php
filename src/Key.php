@@ -17,12 +17,12 @@ class Key
     /**
      * @var ApiCall
      */
-    private ApiCall $apiCall;
+    private $apiCall;
 
     /**
      * @var string
      */
-    private string $keyId;
+    private $keyId;
 
     /**
      * Key constructor.

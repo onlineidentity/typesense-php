@@ -14,7 +14,7 @@ class AnalyticsEvents
     /**
      * @var ApiCall
      */
-    private ApiCall $apiCall;
+    private $apiCall;
 
     /**
      * AnalyticsEvents constructor.

@@ -15,17 +15,17 @@ class Synonym
     /**
      * @var string
      */
-    private string $collectionName;
+    private $collectionName;
 
     /**
      * @var string
      */
-    private string $synonymId;
+    private $synonymId;
 
     /**
      * @var ApiCall
      */
-    private ApiCall $apiCall;
+    private $apiCall;
 
     /**
      * synonym constructor.

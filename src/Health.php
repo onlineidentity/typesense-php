@@ -18,7 +18,7 @@ class Health
     /**
      * @var ApiCall
      */
-    private ApiCall $apiCall;
+    private $apiCall;
 
     /**
      * Alias constructor.

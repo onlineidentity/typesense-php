@@ -15,12 +15,12 @@ class Preset
     /**
      * @var string
      */
-    private string $presetName;
+    private $presetName;
 
     /**
      * @var ApiCall
      */
-    private ApiCall $apiCall;
+    private $apiCall;
 
     /**
      * Preset constructor.

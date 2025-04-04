@@ -39,18 +39,17 @@ class MultiSearchTest extends TestCase
     public function testCanLimitNumberOfRequestsInOneMultiSearch(): void
     {
         $searchRequests = [
-            'searches' => [
-                ...$this->searchRequests['searches'],
+            'searches' => array_merge($this->searchRequests['searches'], [
                 [
                     'q' => 'book 3'
                 ]
-            ]
+            ])
         ];
 
         $this->expectException(RequestMalformed::class);
-        $this->client()->multiSearch->perform($searchRequests, [
+        $this->client()->multiSearch->perform($searchRequests, array_merge([
             "limit_multi_searches" => 2,
-            ...$this->commonSearchParams
-        ]);
+            ],$this->commonSearchParams
+        ));
     }
 }

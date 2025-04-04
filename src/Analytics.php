@@ -6,11 +6,11 @@ class Analytics
 {
     const RESOURCE_PATH = '/analytics';
 
-    private ApiCall $apiCall;
+    private $apiCall;
 
-    private AnalyticsRules $rules;
+    private $rules;
 
-    private AnalyticsEvents $events;
+    private $events;
 
     public function __construct(ApiCall $apiCall)
     {

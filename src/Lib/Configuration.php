@@ -24,37 +24,37 @@ class Configuration
     /**
      * @var Node[]
      */
-    private array $nodes;
+    private $nodes;
 
     /**
      * @var Node|null
      */
-    private ?Node $nearestNode;
+    private $nearestNode;
 
     /**
      * @var string
      */
-    private string $apiKey;
+    private $apiKey;
 
     /**
      * @var float
      */
-    private float $numRetries;
+    private $numRetries;
 
     /**
      * @var float
      */
-    private float $retryIntervalSeconds;
+    private $retryIntervalSeconds;
 
     /**
      * @var int
      */
-    private int $healthCheckIntervalSeconds;
+    private $healthCheckIntervalSeconds;
 
     /**
      * @var LoggerInterface
      */
-    private LoggerInterface $logger;
+    private $logger;
 
     /**
      * @var HttpMethodsClient|ClientInterface|null
@@ -64,7 +64,7 @@ class Configuration
     /**
      * @var int
      */
-    private int $logLevel;
+    private $logLevel;
 
     /**
      * Configuration constructor.
@@ -225,7 +225,7 @@ class Configuration
     /**
      * @return ClientInterface | HttpMethodsClient
      */
-    public function getClient(): ClientInterface | HttpMethodsClient
+    public function getClient()
     {
         if ($this->client === null) {
             $discoveredClient = Psr18ClientDiscovery::find();

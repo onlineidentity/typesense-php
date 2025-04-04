@@ -17,17 +17,17 @@ class Document
     /**
      * @var string
      */
-    private string $collectionName;
+    private $collectionName;
 
     /**
      * @var string
      */
-    private string $documentId;
+    private $documentId;
 
     /**
      * @var ApiCall
      */
-    private ApiCall $apiCall;
+    private $apiCall;
 
     /**
      * Document constructor.

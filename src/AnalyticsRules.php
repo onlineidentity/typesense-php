@@ -6,7 +6,7 @@ class AnalyticsRules implements \ArrayAccess
 {
     const RESOURCE_PATH = '/analytics/rules';
 
-    private ApiCall $apiCall;
+    private $apiCall;
     private $analyticsRules = [];
 
     public function __construct(ApiCall $apiCall)

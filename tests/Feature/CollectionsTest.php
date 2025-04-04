@@ -9,7 +9,7 @@ use Typesense\Exceptions\ObjectNotFound;
 class CollectionsTest extends TestCase
 {
     private $createCollectionRes = null;
-    private ?Collection $testCollection = null;
+    private $testCollection = null;
 
 
     protected function setUp(): void

@@ -17,17 +17,17 @@ class Override
     /**
      * @var string
      */
-    private string $collectionName;
+    private $collectionName;
 
     /**
      * @var string
      */
-    private string $overrideId;
+    private $overrideId;
 
     /**
      * @var ApiCall
      */
-    private ApiCall $apiCall;
+    private $apiCall;
 
     /**
      * Override constructor.

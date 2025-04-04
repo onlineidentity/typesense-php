@@ -9,7 +9,7 @@ use Typesense\ApiCall;
 
 abstract class TestCase extends BaseTestCase
 {
-    private ?Client $typesenseClient = null;
+    private $typesenseClient = null;
     private $mockApiCall;
 
     protected function setUp(): void
@@ -56,8 +56,7 @@ abstract class TestCase extends BaseTestCase
         return json_decode(
             file_get_contents($path),
             true,
-            512,
-            JSON_THROW_ON_ERROR
+            512
         );
     }
 

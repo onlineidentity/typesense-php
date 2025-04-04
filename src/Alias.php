@@ -17,12 +17,12 @@ class Alias
     /**
      * @var string
      */
-    private string $name;
+    private $name;
 
     /**
      * @var ApiCall
      */
-    private ApiCall $apiCall;
+    private $apiCall;
 
     /**
      * Alias constructor.

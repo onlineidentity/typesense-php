@@ -5,7 +5,7 @@ namespace Typesense;
 class AnalyticsRule
 {
     private $ruleName;
-    private ApiCall $apiCall;
+    private $apiCall;
 
     public function __construct(string $ruleName, ApiCall $apiCall)
     {

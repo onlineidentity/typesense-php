@@ -17,17 +17,17 @@ class Synonyms implements \ArrayAccess
     /**
      * @var ApiCall
      */
-    private ApiCall $apiCall;
+    private $apiCall;
 
     /**
      * @var string
      */
-    private string $collectionName;
+    private $collectionName;
 
     /**
      * @var array
      */
-    private array $synonyms = [];
+    private $synonyms = [];
 
     /**
      * Synonyms constructor.

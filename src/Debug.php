@@ -18,7 +18,7 @@ class Debug
     /**
      * @var ApiCall
      */
-    private ApiCall $apiCall;
+    private $apiCall;
 
     /**
      * Alias constructor.

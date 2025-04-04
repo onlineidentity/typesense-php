@@ -14,17 +14,17 @@ class Conversations implements \ArrayAccess
     /**
      * @var ConversationModels
      */
-    public ConversationModels $typesenseModels;
+    public $typesenseModels;
 
     /**
      * @var ApiCall
      */
-    private ApiCall $apiCall;
+    private $apiCall;
 
     /**
      * @var array
      */
-    private array $individualConversations = [];
+    private $individualConversations = [];
 
     /**
      * Conversations constructor.

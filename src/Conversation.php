@@ -15,12 +15,12 @@ class Conversation
     /**
      * @var string
      */
-    private string $id;
+    private $id;
 
     /**
      * @var ApiCall
      */
-    private ApiCall $apiCall;
+    private $apiCall;
 
     /**
      * Conversation constructor.

@@ -14,32 +14,32 @@ class Node
     /**
      * @var string
      */
-    private string $host;
+    private $host;
 
     /**
      * @var string
      */
-    private string $port;
+    private $port;
 
     /**
      * @var string
      */
-    private string $path;
+    private $path;
 
     /**
      * @var string
      */
-    private string $protocol;
+    private $protocol;
 
     /**
      * @var bool
      */
-    private bool $healthy = false;
+    private $healthy = false;
 
     /**
      * @var int
      */
-    private int $lastAccessTs;
+    private $lastAccessTs;
 
     /**
      * Node constructor.
